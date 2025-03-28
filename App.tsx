@@ -13,9 +13,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CreatePostScreen from './screens/CreatePostScreen';
 import NotificationScreen from './screens/NotificationScreen';
-import ChatScreen from './screens/ChatScreen';
-
-
+import ChatListScreen from './screens/ChatListScreen';
 
 // Create Bottom Tab Navigator
 const Tab = createBottomTabNavigator ();
@@ -69,8 +67,8 @@ const App = () => {
             }}
           />
           <Tab.Screen
-            name="ChatScreen"
-            component={ChatScreen}
+            name="ChatListScreen"
+            component={ChatListScreen}
             options={{
               headerTitle: 'Chat',
               headerTitleStyle: {
