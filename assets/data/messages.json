@@ -1,0 +1,137 @@
+[
+  {
+    "id": "m1",
+    "text": "Xiao Shi, did you eat breakfast today?",
+    "createdAt": "2025-03-27T08:00:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m2",
+    "text": "Of course! I had a huge bowl of noodles. What about you?",
+    "createdAt": "2025-03-27T08:02:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m3",
+    "text": "Just coffee. I didn’t have time to cook.",
+    "createdAt": "2025-03-27T08:05:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m4",
+    "text": "That’s not healthy! Want me to buy you something?",
+    "createdAt": "2025-03-27T08:07:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m5",
+    "text": "No need. I’ll eat later.",
+    "createdAt": "2025-03-27T08:10:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m6",
+    "text": "Fine… Anyway, what are you up to today?",
+    "createdAt": "2025-03-27T08:12:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m7",
+    "text": "Just some research. You?",
+    "createdAt": "2025-03-27T08:15:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m8",
+    "text": "I’m thinking of going to the arcade. Wanna come?",
+    "createdAt": "2025-03-27T08:18:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m9",
+    "text": "I have work to do.",
+    "createdAt": "2025-03-27T08:20:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m10",
+    "text": "You’re always working! Just take a break for once.",
+    "createdAt": "2025-03-27T08:22:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m11",
+    "text": "I’ll think about it. Maybe later.",
+    "createdAt": "2025-03-27T08:25:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m12",
+    "text": "Great! I’ll hold you to that.",
+    "createdAt": "2025-03-27T08:27:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m13",
+    "text": "By the way, don’t forget to lock the shop when you leave.",
+    "createdAt": "2025-03-27T08:30:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  },
+  {
+    "id": "m14",
+    "text": "I know, I know. You act like I forget every time.",
+    "createdAt": "2025-03-27T08:32:00.000Z",
+    "user": {
+      "id": "u2",
+      "name": "Cheng Xiao Shi"
+    }
+  },
+  {
+    "id": "m15",
+    "text": "That’s because you do.",
+    "createdAt": "2025-03-27T08:35:00.000Z",
+    "user": {
+      "id": "u1",
+      "name": "Lu Guang"
+    }
+  }
+]
