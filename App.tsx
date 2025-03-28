@@ -1,118 +1,115 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { View, TouchableOpacity, LogBox } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Feather from 'react-native-vector-icons/Feather';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// Ignore specific warning logs
+LogBox.ignoreLogs(['EventEmitter.removeListener']);
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+// Import Screens
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import CreatePostScreen from './screens/CreatePostScreen';
+import NotificationScreen from './screens/NotificationScreen';
+import ChatScreen from './screens/ChatScreen';
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
+
+
+// Create Bottom Tab Navigator
+const Tab = createBottomTabNavigator ();
+
+const App = () => {
+
+    return (
+      <NavigationContainer>
+        <Tab.Navigator
+          initialRouteName={'HomeScreen'}
+          screenOptions={{
+            tabBarActiveTintColor: 'black',
+            tabBarShowLabel: false,
+            tabBarStyle: {
+              backgroundColor: 'white', 
+              height: 60,              
+              borderTopWidth: 1,        
+              borderTopColor: '#ccc',   
+            },
+          }}
+          >
+          <Tab.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={({ navigation }) => ({
+              headerTitle: 'For you',
+              headerRight: () => (
+                <View style={{ flexDirection: 'row', gap: 25, marginRight: 15 }}>
+                  <TouchableOpacity onPress={() => navigation.navigate('NotificationScreen')}>
+                    <Ionicons name="notifications-outline" size={24} color="black" />
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => navigation.navigate('ChatScreen')}>
+                    <Feather name="message-circle" size={24} color="black" />
+                  </TouchableOpacity>
+                </View>
+              ),
+              tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} />,
+            })}
+          />
+          <Tab.Screen
+            name="NotificationScreen"
+            component={NotificationScreen}
+            options={{
+              headerTitle: 'Notification',
+              headerTitleStyle: {
+                // fontFamily: "PTSans-Bold",
+              },
+              tabBarIcon: ({ color }) => {
+                return <Ionicons name="notifications-outline" size={24} color={color} />;
+              },
+            }}
+          />
+          <Tab.Screen
+            name="ChatScreen"
+            component={ChatScreen}
+            options={{
+              headerTitle: 'Chat',
+              headerTitleStyle: {
+                // fontFamily: "PTSans-Bold",
+              },
+              tabBarIcon: ({ color }) => {
+                return <Feather name="message-circle" size={24} color={color} />;
+              },
+            }}
+          />
+          <Tab.Screen
+            name="CreatePostScreen"
+            component={CreatePostScreen}
+            options={{
+              headerTitle: 'Create post',
+              headerTitleStyle: {
+                // fontFamily: "PTSans-Bold",
+              },
+              tabBarIcon: ({ color }) => {
+                return <Feather name="plus-square" size={24} color={ color } />;
+              },
+            }}
+          />
+          <Tab.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{
+              headerTitle: 'Profile',
+              headerTitleStyle: {
+                // fontFamily: "PTSans-Bold",
+              },
+              tabBarIcon: ({ color }) => {
+                return <Feather name="user" size={24} color={ color } />;
+              },
+            }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    );
 }
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
