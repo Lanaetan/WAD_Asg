@@ -20,8 +20,8 @@ BRANCHING & MERGING
 STEPS TO PUSH: 
 1. git add .
 2. git commit -m "Message"
-3. git push origin {branch-name} // push latest updates to <branch-name>
+3. git push origin {branch-name} // push latest updates to {branch-name}
 
 STEPS TO PULL:
-1. git pull origin {branch-name} // pull latest updates from <branch-name>
+1. git pull origin {branch-name} // pull latest updates from {branch-name}
 
