@@ -1,6 +1,5 @@
 import React from "react";
-import {Text,View} from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -9,9 +8,6 @@ import Feather from 'react-native-vector-icons/Feather';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CreatePostScreen from '../screens/CreatePostScreen';
-import NotificationScreen from '../screens/NotificationScreen';
-import ChatListScreen from '../screens/ChatListScreen';
-import ChatScreen from '../screens/ChatScreen';
 import ChatsScreen from '../screens/ChatsScreen';
 
 const Tab = createBottomTabNavigator();
@@ -33,34 +29,26 @@ const MainTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Notifications"
-        component={NotificationScreen}
-        options={{
-          headerTitle: 'Notification',
-          headerTitleStyle: {
-            // fontFamily: "PTSans-Bold",
-          },
-          tabBarIcon: ({ color }) => {
-            return <Ionicons name="notifications-outline" size={24} color={color} />;
-          },
-        }}
-      />
-      <Tab.Screen
         name="Chats"
         component={ChatsScreen}
-        options={{
-          headerTitle: 'Chat',
+        options={({ navigation }) => ({
+          headerTitle: "Chat",
           headerTitleStyle: {
             // fontFamily: "PTSans-Bold",
           },
-          headerRight: () => {
-            return <Ionicons name="notifications-outline" size={24} color={'black'} style={{ marginRight: 15 }}/>;
-            // new message
-          },
-          tabBarIcon: ({ color }) => {
-            return <Feather name="message-circle" size={24} color={color} />;
-          },
-        }}
+          headerRight: () => (
+            <Feather
+              onPress={() => navigation.navigate("Contacts")}
+              name="plus" // entypo: new-message icon
+              size={24}
+              color="black"
+              style={{ marginRight: 15 }}
+            />
+          ),
+          tabBarIcon: ({ color }) => (
+            <Feather name="message-circle" size={24} color={color} />
+          ),
+        })}
       />
       <Tab.Screen
         name="Home"
@@ -69,12 +57,12 @@ const MainTabNavigator = () => {
           headerTitle: 'For you',
           headerRight: () => (
             <View style={{ flexDirection: 'row', gap: 25, marginRight: 15 }}>
-              {/* <TouchableOpacity onPress={() => navigation.navigate('NotificationScreen')}>
-                <Ionicons name="notifications-outline" size={24} color="black" />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('ChatScreen')}>
-                <Feather name="message-circle" size={24} color="black" />
-              </TouchableOpacity> */}
+              <Ionicons
+                onPress={() => navigation.navigate("Notifications")}
+                name="notifications-outline"
+                size={24}
+                color="black"
+              />
             </View>
           ),
           tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} />,

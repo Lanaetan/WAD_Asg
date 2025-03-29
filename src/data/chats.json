@@ -2,19 +2,21 @@
   {
     "id": "1",
     "user": {
+      "name": "Lu Guang",
       "image": "https://pbs.twimg.com/profile_images/1873536351678664704/6IEQ-nVu_400x400.jpg",
-      "name": "Lu Guang"
+      "status": "Hey there! I'm using Insta"
     },
     "lastMessage": {
-      "text": "Breakfast?",
+      "text": "When will you be there?",
       "createdAt": "2025-01-27T15:40:00.000Z"
     }
   },
   {
     "id": "2",
     "user": {
+      "name": "Cheng Xiao Shi",
       "image": "https://pbs.twimg.com/media/FMOCzfWWUAgBbOZ.jpg",
-      "name": "Cheng Xiao Shi"
+      "status": "Yahoooo!!!"
     },
     "lastMessage": {
       "text": "Hehe",
@@ -24,8 +26,9 @@
   {
     "id": "3",
     "user": {
+      "name": "Qiao Ling",
       "image": "https://static.myfigurecollection.net/upload/entries/1/320090-48b39.jpg",
-      "name": "Qiao Ling"
+      "status": "Dieting"
     },
     "lastMessage": {
       "text": "Morning!",
@@ -35,8 +38,9 @@
   {
     "id": "4",
     "user": {
+      "name": "Li Tian Xi",
       "image": "https://pbs.twimg.com/media/GBmm_28WsAAtfBC.jpg",
-      "name": "Li Tian Xi"
+      "status": "><"
     },
     "lastMessage": {
       "text": "Thankyouuu <3",
@@ -46,8 +50,9 @@
   {
     "id": "5",
     "user": {
+      "name": "Li Tian Chen",
       "image": "https://s4.anilist.co/file/anilistcdn/character/large/b313878-X0gZ1Q4CJkHf.png",
-      "name": "Li Tian Chen"
+      "status": "Huh?"
     },
     "lastMessage": {
       "text": "What??",
@@ -57,8 +62,9 @@
   {
     "id": "6",
     "user": {
+      "name": "Vein",
       "image": "https://i.pinimg.com/236x/08/a3/66/08a366abd1310f5ab4d9873a02c9f903.jpg",
-      "name": "Vein"
+      "status": "Hmmmmm"
     },
     "lastMessage": {
       "text": "HAHAHAHA",
@@ -68,8 +74,9 @@
   {
     "id": "7",
     "user": {
+      "name": "Felix",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5lPVtprb5pu2CIhubHijvQ_t9KsCtjkI-cQ&s",
-      "name": "Felix"
+      "status": "Need sleeepppp"
     },
     "lastMessage": {
       "text": "><",
@@ -79,8 +86,9 @@
   {
     "id": "8",
     "user": {
+      "name": "Liu Xiao",
       "image": "https://cdn.myanimelist.net/r/200x268/images/characters/11/580922.jpg?s=d5cad682288409f96be03ad09d79f4ec",
-      "name": "Liu Xiao"
+      "status": "Busy"
     },
     "lastMessage": {
       "text": "No worries.",
