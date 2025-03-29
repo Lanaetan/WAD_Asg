@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity, SafeAreaView } from "react-native";
 import Feather from "react-native-vector-icons/Feather"
 
 const InputBox = () => {
@@ -12,7 +12,7 @@ const InputBox = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* Icon */}
       <Feather name="plus" size={24} color='#37b0b0' />
 
@@ -28,7 +28,7 @@ const InputBox = () => {
         <Feather style={styles.send} name="send" size={22} color='white' />
       </TouchableOpacity>
       
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -60,8 +60,6 @@ const styles = StyleSheet.create({
     paddingRight: 9,
     borderRadius: 30,
     overflow: 'hidden',
-
-
   },
 });
 

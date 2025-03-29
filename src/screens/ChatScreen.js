@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, ImageBackground, StyleSheet, FlatList, TextInput } from "react-native";
-import Feather from "react-native-vector-icons/Feather"
+import { useRoute, useNavigation } from "@react-navigation/native";
 
-import Message from "../assets/components/Message";
-import InputBox from "../assets/components/InputBox";
+import Message from "../components/Message";
+import InputBox from "../components/InputBox";
 
 // import bg from '../assets/images/luguang.jpg';
-import messages from '../assets/data/messages.json'
+import messages from '../data/messages.json'
 
 
 const ChatScreen = () => {
 
-  const bg = require('../assets/images/luguang.jpg');
+  const route = useRoute();
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({ title: route.params.name });
+  }, [route.params?.name]);
+ 
+
     return(
       // <ImageBackground source={bg} style={styles.bg}></ImageBackground>
       <View style={styles.bg}>

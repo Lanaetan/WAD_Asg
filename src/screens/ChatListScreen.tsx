@@ -1,8 +1,10 @@
 import React from "react";
 import {StatusBar, StyleSheet, Text,View} from "react-native";
-import ChatListItem from '../assets/components/ChatListItem'
+import ChatListItem from '../components/ChatListItem'
 import ChatsScreen from './ChatsScreen';
 import ChatScreen from './ChatScreen';
+import Navigator from './src/navigation';
+
 
 const App = () => {
     return(
@@ -10,6 +12,8 @@ const App = () => {
             <ChatScreen />
 
             {/* <StatusBar style="auto" /> */}
+
+            {/* COPIED TO APP.TSX */}
         </View>
     )
 }
@@ -22,5 +26,6 @@ const styles = StyleSheet.create({
     // paddingVertical: 50,
   }
 })
+
 
 export default App;

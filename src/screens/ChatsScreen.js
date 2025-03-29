@@ -1,8 +1,7 @@
 import React from "react";
 import {Text,View, FlatList} from "react-native";
-import chats from '../assets/data/chats.json';
-// import { FlatList } from "react-native-gesture-handler";
-import ChatListItem from "../assets/components/ChatListItem";
+import chats from '../data/chats.json';
+import ChatListItem from "../components/ChatListItem";
 
 const ChatsScreen = () => {
     return(
