@@ -11,6 +11,7 @@ import NotificationScreen from '../screens/NotificationScreen';
 import ChatScreen from '../screens/ChatScreen';
 import ContactsScreen from '../screens/ContactsScreen';
 import MainTabNavigator from './MainTabNavigator';
+import DummyChatScreen from '../screens/DummyChatScreen';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const Navigator = () => {
         }}>
           <Stack.Screen name='Main' component={MainTabNavigator} options={{ headerShown: false}}/>
           <Stack.Screen name='Notifications' component={NotificationScreen}/>
+          <Stack.Screen name='DummyChat' component={DummyChatScreen}/>
           <Stack.Screen name='Chat' component={ChatScreen}/>
           <Stack.Screen name='Contacts' component={ContactsScreen}/>
         </Stack.Navigator>

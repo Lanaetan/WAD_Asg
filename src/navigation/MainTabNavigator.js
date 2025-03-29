@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CreatePostScreen from '../screens/CreatePostScreen';
 import ChatsScreen from '../screens/ChatsScreen';
+import DummyHomeScreen from "../screens/DummyHomeScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +53,7 @@ const MainTabNavigator = () => {
       />
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={DummyHomeScreen}
         options={({ navigation }) => ({
           headerTitle: 'For you',
           headerRight: () => (
