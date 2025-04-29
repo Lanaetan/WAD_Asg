@@ -5,3 +5,7 @@ okok, good idea.
 
 Andy was here too
 
+IF USING ACTUAL DEVICE:
+1. Config.tsx -> change to ip address of actual device
+
+

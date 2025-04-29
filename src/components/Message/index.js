@@ -4,10 +4,11 @@ import dayjs from 'dayjs';
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
-const Message = ({ message }) => {
+const Message = ({ message, myId }) => {
+  console.log("Messager:", message.sender, "My ID:", myId);
 
   const isMyMessage = () => {
-    return message.user.id === 'u2';
+    return message.sender === myId;
   };
 
     return(

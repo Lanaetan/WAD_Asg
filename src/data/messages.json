@@ -1,74 +1,66 @@
 [
   {
-    "id": "m1",
+    "id": "1",
+    "chatroomId": "room456",
+    "senderId": "u2",
+    "receiverId": "u1",
     "text": "Xiao Shi! I just found a new café near the bookstore. Let’s go check it out!",
-    "createdAt": "2025-03-27T09:00:00.000Z",
-    "user": {
-      "id": "u1",
-      "name": "Qiao Ling"
-    }
+    "createdAt": "2025-03-27T09:00:00.000Z"
   },
   {
-    "id": "m2",
+    "id": "2",
+    "chatroomId": "room456",
+    "senderId": "u2",
+    "receiverId": "u1",
     "text": "Right now? I’m still in my pajamas.",
-    "createdAt": "2025-03-27T09:02:00.000Z",
-    "user": {
-      "id": "u2",
-      "name": "Cheng Xiao Shi"
-    }
+    "createdAt": "2025-03-27T09:02:00.000Z"
   },
   {
-    "id": "m3",
+    "id": "3",
+    "chatroomId": "room456",
+    "senderId": "u1",
+    "receiverId": "u2",
     "text": "So? Just throw on a hoodie. No one will notice.",
-    "createdAt": "2025-03-27T09:05:00.000Z",
-    "user": {
-      "id": "u1",
-      "name": "Qiao Ling"
-    }
+    "createdAt": "2025-03-27T09:05:00.000Z"
   },
   {
-    "id": "m4",
+    "id": "4",
+    "chatroomId": "room456",
+    "senderId": "u2",
+    "receiverId": "u1",
     "text": "You say that like I don’t have bed hair sticking out in five directions.",
-    "createdAt": "2025-03-27T09:07:00.000Z",
-    "user": {
-      "id": "u2",
-      "name": "Cheng Xiao Shi"
-    }
+    "createdAt": "2025-03-27T09:07:00.000Z"
   },
   {
-    "id": "m5",
+    "id": "5",
+    "chatroomId": "room456",
+    "senderId": "u1",
+    "receiverId": "u2",
     "text": "That’s what caps are for. Come on, they have matcha lattes!",
-    "createdAt": "2025-03-27T09:10:00.000Z",
-    "user": {
-      "id": "u1",
-      "name": "Qiao Ling"
-    }
+    "createdAt": "2025-03-27T09:10:00.000Z"
   },
   {
-    "id": "m6",
+    "id": "6",
+    "chatroomId": "room456",
+    "senderId": "u2",
+    "receiverId": "u1",
     "text": "Ugh. Fine. You win. Give me ten minutes.",
-    "createdAt": "2025-03-27T09:12:00.000Z",
-    "user": {
-      "id": "u2",
-      "name": "Cheng Xiao Shi"
-    }
+    "createdAt": "2025-03-27T09:12:00.000Z"
   },
   {
-    "id": "m7",
+    "id": "7",
+    "chatroomId": "room456",
+    "senderId": "u1",
+    "receiverId": "u2",
     "text": "Make it five. I’m already outside your door.",
-    "createdAt": "2025-03-27T09:15:00.000Z",
-    "user": {
-      "id": "u1",
-      "name": "Qiao Ling"
-    }
+    "createdAt": "2025-03-27T09:15:00.000Z"
   },
   {
-    "id": "m8",
+    "id": "8",
+    "chatroomId": "room456",
+    "senderId": "u2",
+    "receiverId": "u1",
     "text": "WHAT?!",
-    "createdAt": "2025-03-27T09:17:00.000Z",
-    "user": {
-      "id": "u2",
-      "name": "Cheng Xiao Shi"
-    }
+    "createdAt": "2025-03-27T09:17:00.000Z"
   }
 ]

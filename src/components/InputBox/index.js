@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { StyleSheet, View, TextInput, TouchableOpacity, SafeAreaView } from "react-native";
 import Feather from "react-native-vector-icons/Feather"
 
-const InputBox = () => {
-  const [newMessage, setNewMessage] = useState('');
+const InputBox = (props) => {
+  // const [newMessage, setNewMessage] = useState('');
 
-  const onSend = () => {
-    console.warn("Sending a new message: ", newMessage);
+  // const onSend = () => {
+  //   console.warn("Sending a new message: ", newMessage);
 
-    setNewMessage('');
-  };
+
+  //   setNewMessage('');
+  // };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,13 +19,16 @@ const InputBox = () => {
 
       {/* Text Input */}
       <TextInput 
-        value={newMessage}
-        onChangeText={setNewMessage}
+        // value={newMessage}
+        // onChangeText={setNewMessage}
+        value={props.value}
         style={styles.input} 
-        placeholder="Type your message..."></TextInput>
+        placeholder="Type your message..."
+        onChangeText={props.onChangeText}
+      />
 
       {/* Icon */}
-      <TouchableOpacity onPress={onSend}>
+      <TouchableOpacity onPress={props.onSend}>
         <Feather style={styles.send} name="send" size={22} color='white' />
       </TouchableOpacity>
       
