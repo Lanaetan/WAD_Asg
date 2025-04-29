@@ -36,7 +36,7 @@ export default function SignupScreen() {
           </TouchableOpacity>
         </Animated.View>
         <Animated.View entering={FadeInUp.delay(800).duration(1000).springify()} style={{ flexDirection: 'row', justifyContent: 'center' }}>
-          <Text>Don't have an account?</Text>
+          <Text>Already have an account? </Text>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={{ color: '#0284c7' }}>Login</Text>
           </TouchableOpacity>
