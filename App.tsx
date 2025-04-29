@@ -1,26 +1,24 @@
 import React from "react";
 import {StatusBar, StyleSheet, Text,View} from "react-native";
 import Navigator from './src/navigation';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import SignupScreen from "./src/screens/SignupScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import WelcomeScreen from "./src/screens/WelcomeScreen";
 
-
-const App = () => {
+const Stack = createStackNavigator();
+function App() {
     return(
-        <View style={styles.container}>
-            <Navigator />
-
-            {/* <StatusBar style="auto" /> */}
-        </View>
+     <NavigationContainer>
+      <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown:false}}>
+        <Stack.Screen name="Welcome" component={WelcomeScreen}/>
+        <Stack.Screen name="Login" component={LoginScreen}/>
+        <Stack.Screen name="SignUp" component={SignupScreen}/>
+      </Stack.Navigator>
+     </NavigationContainer>
     )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    
-  }
-})
 
 
 export default App;
